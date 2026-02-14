@@ -25,42 +25,20 @@ flowchart TD
 
 📈 Example Signal Behavior
 1️⃣ Raw Heart Rate (With Motion Artifacts)
-| Stable 75 bpm ----
-|     ^ spike
-|     ^ spike
-| Gradual rise during distress
+ Stable 75 bpm ----
+   ^ spike
+    ^ spike
+ Gradual rise during distress
 
 2️⃣ SpO₂ During Motion vs True Distress
 
 Sudden drop + high motion → artifact
-
 Gradual drop + low motion → real deterioration
 
 3️⃣ Motion Signal
 
 Mostly low baseline
-
 Short sharp spikes (road bumps)
-
-🏗 Repository Structure
-gray-mobility-smart-ambulance-ml/
-│
-├── data/                  # Generated vitals
-├── plots/                 # Before/after cleaning visuals
-├── src/
-│   ├── data_gen.py
-│   ├── artifact_detection.py
-│   ├── anomaly_model.py
-│   ├── risk_logic.py
-│   ├── evaluate.py
-│
-├── api/
-│   └── app.py             # FastAPI service
-│
-├── run_pipeline.py
-├── report.md
-├── requirements.txt
-└── README.md
 
 
 Modular structure ensures reproducibility and avoids notebook-only submission.
